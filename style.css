@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @font-face {
     font-family: 'Fixel Regular';
     src: local('Fixel Display Regular'), local('Fixel-Display-Regular'),
@@ -42,6 +43,9 @@
 .fixel-regular {font-family: 'Fixel Regular', sans-serif;}
 .fixel-bold {font-family: 'Fixel Bold', sans-serif;}
 .fixel-semibold {font-family: 'Fixel Semibold', sans-serif;}
+.inter-medium {font-family: 'Inter', sans-serif;  font-weight: 500;}
+.inter-regular {font-family: 'Inter', sans-serif;  font-weight: 400;}
+.inter-bold {font-family: 'Inter', sans-serif; font-weight: 600;}
 .color-white {color: #FFFFFF;}
 .bg-pink {background-color: #F25B92;}
 .bg-light-pink {background-color: #FF70A4;}
@@ -51,6 +55,9 @@
 html {
     font-size: 20px;
     background: #FFFFFF;
+}
+html > main {
+    overflow: hidden;
 }
 * {
     box-sizing: border-box;
@@ -166,11 +173,15 @@ header > .offer > div {
     flex: 1;
 }
 header > .offer .button {
+    flex: 2;
+}
+header > .offer .button ,
+section.personal-brand .button,
+section.author .button {
     display: flex;
     gap: 1rem;
     align-items: center;
     flex-direction: row;
-    flex: 2;
     background-image: url("assets/images/button-bg.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -180,10 +191,19 @@ header > .offer .button {
     font-size: 1.2rem;
     margin-left: -2rem;
 }
-header > .offer > .button > span {
+section.personal-brand .button,
+section.author .button {
+    width: 25rem;
+}
+section.personal-brand .button {
+    margin: 2rem auto;
+}
+header > .offer > .button > span,
+section.personal-brand .button > span,
+section.author .button > span {
     width: 100%;
     height: 100%;
-    padding-top:3rem;
+    padding-top:3.1rem;
     padding-left: 1rem;
     text-align: center;
 }
@@ -203,7 +223,7 @@ section.for {
     padding: 2rem 5rem 0 0;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
 }
 section.for > .content {
     display: flex;
@@ -300,6 +320,225 @@ section.for .for-item  .list  > .info .text {
     color: #FFFFFF;
     font-family: "Fixel Regular", sans-serif;
 }
+section.for .title {
+    width: fit-content;
+    padding-left: 2rem;
+    text-align: center;
+    font-size: 5rem;
+}
+section.course {
+    padding: 3rem;
+}
+section.course .title {
+    font-size: 5rem;
+    padding-bottom: 3rem;
+    text-align: right;
+}
+section.course .title span {
+    margin-right: 12rem;
+}
+section.course .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+    grid-auto-columns: 1fr;
+    gap: 1rem 1rem;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "pink-1 empty-1 white-1 img-1"
+    "empty-2 black-1 white-2 empty-3"
+    "white-3 img-2 empty-4 pink-2";
+}
+section.course .grid > div {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.pink-1 { grid-area: pink-1; }
+.empty-1 { grid-area: empty-1; }
+.white-1 { grid-area: white-1; }
+.img-1 { grid-area: img-1; }
+.empty-2 { grid-area: empty-2; }
+.black-1 { grid-area: black-1; }
+.white-2 { grid-area: white-2; }
+.empty-3 { grid-area: empty-3; }
+.white-3 { grid-area: white-3; }
+.img-2 { grid-area: img-2; }
+.empty-4 { grid-area: empty-4; }
+.pink-2 { grid-area: pink-2; }
+section.course .grid > div > .top {
+    display: flex;
+    justify-content: space-between;
+}
+section.course .grid .top > .img-wrapper {
+    width: 3.2rem;
+    height: 3.2rem;
+}
+section.course .grid > div[class^="img"] {
+    padding: 0;
+}
+section.course .grid .top > .img-wrapper img {
+    width: 100%;
+    height: 100%;
+}
+section.course .grid .white-2,
+section.course .grid .white-3 {
+    border: 1px solid #C9C9C9;
+}
+section.course .grid .white-1 {
+    background: #F4F4F4;
+}
+section.course .grid .img-1 img,
+section.course .grid .img-2 img {
+    width: 100%;
+    height: 100%;
+}
+section.personal-brand {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3rem;
+}
+section.personal-brand .title > .inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 3rem;
+    position: relative;
+}
+section.personal-brand .title > .inner > div {
+    font-size: 5rem;
+}
+section.personal-brand .title > .inner > div:not(:first-child):not(.abs) {
+    padding-left: 8rem;
+}
+section.personal-brand .title > .inner > .abs {
+    position: absolute;
+    left: calc(65%);
+    top: -5rem;
+    transform: translateX(-50%);
+}
+section.personal-brand .title > .inner > .abs img {
+    height: 30rem;
+}
+section.personal-brand .content {
+    margin-top: 8rem;
+    border-top: 1px solid #C9C9C9;
+    border-bottom: 1px solid #C9C9C9;
+    padding-bottom: 1.5rem;
+}
+section.personal-brand .content .inner {
+    display: flex;
+    width: fit-content;
+    margin: 0 auto 0 auto;
+    gap: 4rem;
+}
+section.personal-brand .inner .img {
+    width: 10rem;
+    height: 10rem;
+    margin-top: -1.5rem;
+}
+section.personal-brand .inner .benefit:first-child .img,
+section.personal-brand .inner .benefit:nth-child(3) .img{
+    margin-top: -3.5rem;
+    width: 12rem;
+    height: 12rem;
+}
+section.personal-brand .inner .benefit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+section.personal-brand .inner .benefit .text {
+    text-align: center;
+}
+section.personal-brand .inner .img > img {
+    width: 100%;
+    height: 100%;
+}
+section.author {
+    padding: 2rem 0 0 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+section.author > .content {
+    display: flex;
+    gap: 1rem;
+}
+section.author > .content .right {
+    width: 60%;
+}
+section.author > .content .right img {
+    height: auto;
+    width: 100%;
+    image-rendering: auto;
+    object-fit: contain;
+}
+section.author > .content .left {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    width: 40%;
+}
+section.author .left > .nums {
+    display: flex;
+    gap: 1.5rem;
+}
+section.author .left > .nums > div {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+section.author .left > .nums > div > div:first-child {
+    font-size: 1.7rem;
+}
+section.author .left > .author-text {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+section.author .left > .author-text * {
+    color: #FFFFFF;
+}
+section.author .left > .author-text .name {
+    font-size: 2.5rem;
+    padding-bottom: .5rem;
+}
+section.author .left > .author-text .about {
+    font-size: 1.25rem;
+    padding-bottom: 1.75rem;
+    border-bottom: 1px solid #FFFFFF;
+}
+section.author .left > .author-text .bottom {
+    padding-top: 1.75rem;
+}
+section.author .left > .achievements {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem 1rem;
+}
+section.author .left > .achievements > div {
+    width: calc(50% - .5rem);
+    display: flex;
+    gap: 1rem;
+}
+section.author .left > .achievements .num {
+    color: #F25B92;
+}
+section.author .left > .achievements .text {
+    line-height: 120%;
+}
+section.author .button {
+    align-self: flex-end;
+}
+section.author .img-mobile {
+    display: none;
+}
 
 @media screen and (min-width: 2560px) and (max-width: 3840px) {
     html {
@@ -309,15 +548,21 @@ section.for .for-item  .list  > .info .text {
         padding-left: 8rem;
         padding-right: 8rem;
     }
-    header > .offer > .button {
+    header > .offer > .button,
+    section.personal-brand .button,
+    section.author .button {
         font-size: 1.5rem;
     }
     section.for {
-        padding-right: 8rem;
+        padding-right: 15rem;
+    }
+    section.author {
+        padding-left: 15rem;
     }
 }
 @media only screen and (min-width: 1921px) and (max-width: 2240px) {
-    section.for > .content .left img {
+    section.for > .content .left img,
+    section.author .right img {
         width: 85%;
     }
 }
@@ -326,16 +571,36 @@ section.for .for-item  .list  > .info .text {
         padding-left: 6rem;
         padding-right: 6rem;
     }
-
+    section.for {
+        padding-right: 10rem;
+    }
+    section.author {
+        padding-left: 10rem;
+    }
 }
 @media only screen and (max-width: 2559px) {
     header > .title-wrapper > .title {
         font-size: calc(100vw / 4);
     }
 }
-@media only screen and (max-width: 1920px) {
+@media only screen and (min-width: 1441px) and (max-width: 1920px) {
     section.for > .content .left img {
         width: 100%;
+    }
+    section.personal-brand .title > .inner > .abs {
+        left: 68%;
+    }
+    section.personal-brand .title > .inner > .abs img {
+        height: 25rem;
+    }
+    section.personal-brand .content {
+        margin-top: 4rem;
+    }
+    section.for {
+        padding-right: 7rem;
+    }
+    section.author {
+        padding-left: 7rem;
     }
 }
 @media only screen and (min-width: 1601px) and (max-width: 1920px) {
@@ -344,26 +609,65 @@ section.for .for-item  .list  > .info .text {
     html {
         font-size: 18px;
     }
-    header > .offer > .button {
+    header > .offer > .button,
+    section.personal-brand .button,
+    section.author .button {
         height: 8rem;
+    }
+    header > .offer > .button {
         flex: 2.25;
     }
     section.for > .content {
         gap: 0;
+    }
+    section.for > .content .left img {
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 1240px) and (max-width: 1440px) {
+    section.personal-brand .title > .inner > div,
+    section.for .title,
+    section.course .title {
+        font-size: 4rem;
+    }
+    section.personal-brand {
+        padding-top: 5rem;
+    }
+    section.personal-brand .title > .inner > .abs {
+        left: 75%;
+        top: -10rem;
+    }
+    section.personal-brand .title > .inner > .abs img {
+        height: 30rem;
+    }
+    section.author {
+        padding-left: 2rem;
+    }
+    section.author .left > .author-text .about {
+        font-size: 1.15rem;
+    }
+    section.author > .content .left {
+        gap: 2rem;
     }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1239px) {
     html {
         font-size: 16px;
     }
-    header > .offer > .button {
+    header > .offer > .button,
+    section.personal-brand .button,
+    section.author .button {
         height: 7.5rem;
+    }
+    header > .offer > .button {
         flex: 2.5;
     }
     header > .offer .offer-text {
         font-size: 1.4rem;
     }
-    header > .offer > .button > span {
+    header > .offer > .button > span,
+    section.personal-brand .button > span,
+    section.author .button > span {
         padding-top: 2.5rem;
     }
     section.for > .content .right .for-item {
@@ -371,6 +675,36 @@ section.for .for-item  .list  > .info .text {
     }
     section.for {
         padding-right: 3rem;
+    }
+    section.course .grid > div {
+        padding: 1.5rem;
+    }
+    section.course .grid > div .inter-regular,
+    section.course .grid > div .inter-bold {
+        font-size: .9rem;
+    }
+    section.personal-brand .title > .inner > div,
+    section.for .title,
+    section.course .title {
+        font-size: 3rem;
+    }
+    section.personal-brand .title > .inner > .abs {
+        left: 75%;
+        top: -7.5rem;
+    }
+    section.personal-brand .title > .inner > .abs img {
+        height: 25rem;
+    }
+    section.author {
+        padding-left: 1rem;
+    }
+    section.author > .content .left {
+        width: 50%;
+        gap: 2rem;
+    }
+    section.author > .content .right img {
+        width: 110%;
+        margin-left: -10%;
     }
 }
 
@@ -402,11 +736,17 @@ section.for .for-item  .list  > .info .text {
     header > .offer .offer-text {
         font-size: 1.4rem;
     }
-    header > .offer > .button {
+    header > .offer > .button,
+    section.personal-brand .button,
+    section.author .button {
         height: 7.5rem;
+    }
+    header > .offer > .button {
         flex: 2.5;
     }
-    header > .offer > .button > span {
+    header > .offer > .button > span,
+    section.personal-brand .button > span,
+    section.author .button > span {
         padding-top: 2.5rem;
     }
     header > .title-wrapper > .title-offer {
@@ -417,6 +757,65 @@ section.for .for-item  .list  > .info .text {
     }
     section.for > .content .left img {
         width: 120%;
+    }
+    section.course {
+        padding: 2rem 1.5rem;
+    }
+    section.course .grid {
+        gap: .75rem .75rem;
+    }
+    section.course .grid > div {
+        padding: 1rem;
+    }
+    section.course .grid > div .inter-regular,
+    section.course .grid > div .inter-bold {
+        font-size: .9rem;
+    }
+    section.course .grid .white-3 br {
+        display: none;
+    }
+    section.personal-brand {
+        padding-top: 5rem;
+    }
+    section.personal-brand .title > .inner > div,
+    section.for .title,
+    section.course .title {
+        font-size: 3.5rem;
+    }
+    section.personal-brand .title > .inner > .abs {
+        left: 75%;
+        top: -7rem;
+    }
+    section.personal-brand .title > .inner > .abs img {
+        height: 24rem;
+    }
+    section.personal-brand .content {
+        margin-top: 6rem;
+    }
+    section.personal-brand .button,
+    section.author .button {
+        max-width: 25rem;
+    }
+    section.author {
+        padding-left: 1rem;
+    }
+    section.author > .content .left {
+        width: 60%;
+        gap: 2rem;
+    }
+    section.author > .content .right img {
+        width: 130%;
+        margin-left: -20%;
+    }
+    section.author .button {
+        align-self: center;
+    }
+    section.author .left > .achievements .text,
+    section.author .left > .achievements .num {
+        font-size: .9rem;
+    }
+    section.author .left > .achievements {
+        gap: 1.5rem 1rem;
     }
 }
 @media only screen and (max-width: 829px) {
@@ -442,7 +841,7 @@ section.for .for-item  .list  > .info .text {
         text-align: center;
         font-size: 1.2rem;
     }
-    br:not(.mobile) {
+    section.for br:not(.mobile) {
         display: none !important;
     }
     header > .offer > .text {
@@ -467,13 +866,19 @@ section.for .for-item  .list  > .info .text {
     header > .offer > .heart-wrapper {
         display: none;
     }
-    header > .offer > .button {
-        order: 3;
+    header > .offer > .button,
+    section.personal-brand .button,
+    section.author .button {
         max-width: 450px;
         height: 7rem;
-        flex: none;
     }
-    header > .offer > .button > span {
+    header > .offer > .button {
+        flex: none;
+        order: 3;
+    }
+    header > .offer > .button > span,
+    section.personal-brand .button > span,
+    section.author .button > span {
         padding-top: 2.5rem;
     }
     header > .offer .offer-text br {
@@ -511,6 +916,113 @@ section.for .for-item  .list  > .info .text {
     section.for > .content .right {
         width: 100%;
     }
+    section.for .title {
+        padding-left: 0;
+        width: 70%;
+        text-align: left;
+        margin: auto;
+    }
+    section.for .title span {
+        width: 100%;
+        text-align: end;
+        display: block;
+        padding-right: 2rem;
+    }
+    section.course .grid {
+        max-width: 35rem;
+        margin: auto;
+        align-items: end;
+        grid-template-areas:
+            "pink-1 pink-1 img-1"
+            "empty-1 white-1 white-1"
+            "black-1 black-1 empty-2"
+            "img-2 white-2 white-2"
+            "pink-2 pink-2 empty-3"
+            "empty-4 white-3 white-3";
+    }
+    section.personal-brand {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+    section.personal-brand .title > .inner {
+        padding: 0;
+    }
+    section.personal-brand .title > .inner > div,
+    section.course .title,
+    section.for .title {
+        font-size: 3.5rem;
+        text-align: start;
+    }
+    section.course .title span {
+        margin: 0 0 0 7rem;
+    }
+    section.personal-brand .title > .inner > div:not(:first-child):not(.abs) {
+        text-align: end;
+        padding-left: 0;
+    }
+    section.personal-brand .title > .inner > .abs {
+        left: -6rem;
+        top: 40%;
+        transform: translateX(0);
+    }
+    section.personal-brand .title > .inner > .abs img {
+        height: 12rem;
+    }
+    section.personal-brand .content {
+        border: none;
+        margin-top: 4rem;
+        padding-bottom: 0;
+    }
+    section.personal-brand .content .inner {
+        flex-wrap: wrap;
+    }
+    section.personal-brand .inner .benefit {
+        flex: 1;
+        min-width: 40%;
+    }
+    section.personal-brand .inner .benefit .img {
+        width: 10rem !important;
+        height: 10rem !important;
+    }
+    section.personal-brand .inner .benefit .img {
+        margin: 0 !important;
+    }
+    section.author {
+        padding: 3rem;
+    }
+    section.author .content .right {
+        display: none;
+    }
+    section.author .content .left {
+        width: 100%;
+        align-items: center;
+        gap: 2rem;
+    }
+    section.author .content .left .img-mobile {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: -2rem;
+    }
+    section.author .content .left .img-mobile img {
+        width: 80%;
+    }
+    section.author .left > .nums > div > div:first-child {
+        font-size: 2rem;
+    }
+    section.author .left > .nums > div > div:last-child {
+        font-size: 1.25rem;
+    }
+    section.author .left > .nums {
+        gap: 4rem;
+    }
+    section.author .left > .achievements .text,
+    section.author .left > .achievements .num {
+        font-size: 1.05rem;
+    }
+    section.author .button {
+        align-self: center;
+    }
 }
 @media only screen and (max-width: 600px) {
     header > .info-top > .start-date {
@@ -519,6 +1031,9 @@ section.for .for-item  .list  > .info .text {
     }
     header > .info-top > .start-date > div {
         color: #1D1D1D;
+    }
+    section.for .title {
+        width: 100%;
     }
     header > .info-top .author {
         display: none;
@@ -533,8 +1048,102 @@ section.for .for-item  .list  > .info .text {
     section.for > .content .right .for-item {
         padding: 1.2rem 1.2rem 1.2rem 1.2rem;
     }
+    section.course,
+    section.personal-brand {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    section.personal-brand {
+        padding-left: 0;
+        padding-right: 1rem;
+    }
+    section.course .grid {
+        width: 100%;
+    }
+    section.course .grid > div {
+        padding: 1.5rem;
+    }
+    section.personal-brand .content .inner {
+        flex-direction: column;
+        gap: 0;
+    }
+    section.personal-brand .content .inner .benefit {
+        flex-direction: row;
+    }
+    section.personal-brand .inner .benefit .text {
+        text-align: start;
+    }
+    section.personal-brand .benefit .text br {
+        display: none;
+    }
+    section.personal-brand .benefit .text br.mobile {
+    display: block;
+    }
+
+    section.personal-brand .benefit span.mobile {
+        font-weight: 700;
+    }
+    section.personal-brand .button,
+    section.author .button {
+        width: 80vw;
+    }
+    section.personal-brand .inner .benefit .img {
+        width: 8rem !important;
+        height: 8rem !important;
+    }
+    section.author,
+    section.author .left > .author-text {
+        padding: 3rem 2rem;
+    }
+    section.author .left > .author-text {
+        padding: 2rem;
+    }
+    section.author .content .left .img-mobile img {
+        width: 100%;
+    }
+    section.author .left > .author-text .about {
+        font-size: 1.2rem;
+    }
+    section.author .left > .achievements {
+        flex-direction: column;
+        width: 100%;
+    }
+    section.author .left > .achievements > div {
+        width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    section.author .left > .achievements > div br {
+        display: none;
+    }
+    section.course .title span {
+        margin: 0 0 0 5rem;
+    }
+    section.personal-brand .title > .inner > div, section.course .title, section.for .title {
+        font-size: 3rem;
+    }
+}
+@media only screen and (max-width: 500px) {
+    section.personal-brand .title > .inner > .abs {
+        left: -5vw;
+    }
+    section.personal-brand .title > .inner > .abs img {
+        height: 25vw;
+    }
 }
 @media only screen and (max-width: 480px) {
+    section.author {
+        padding: 3rem 0;
+    }
+    section.author .content .left .img-mobile img {
+        width: 120%;
+    }
+    section.author .left > .achievements > div {
+        padding: 0 2rem;
+    }
+    section.personal-brand .title > .inner > div, section.course .title, section.for .title {
+        font-size: 2.5rem;
+    }
 }
 @media only screen and (max-width: 420px) {
     html {
@@ -551,6 +1160,9 @@ section.for .for-item  .list  > .info .text {
     }
     header > .offer .offer-text {
         font-size: 1.1rem;
+    }
+    section.personal-brand .title > .inner > div {
+        font-size: 3.25rem;
     }
 }
 @media only screen and (max-width: 359px) {
