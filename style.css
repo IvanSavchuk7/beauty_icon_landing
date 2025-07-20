@@ -56,7 +56,7 @@ html {
     font-size: 20px;
     background: #FFFFFF;
 }
-html > main {
+html main {
     overflow: hidden;
 }
 * {
@@ -177,7 +177,8 @@ header > .offer .button {
 }
 header > .offer .button ,
 section.personal-brand .button,
-section.author .button {
+section.author .button,
+section.program .button{
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -192,7 +193,8 @@ section.author .button {
     margin-left: -2rem;
 }
 section.personal-brand .button,
-section.author .button {
+section.author .button,
+section.program .button {
     width: 25rem;
 }
 section.personal-brand .button {
@@ -200,7 +202,8 @@ section.personal-brand .button {
 }
 header > .offer > .button > span,
 section.personal-brand .button > span,
-section.author .button > span {
+section.author .button > span,
+section.program .button > span {
     width: 100%;
     height: 100%;
     padding-top:3.1rem;
@@ -328,6 +331,13 @@ section.for .title {
 }
 section.course {
     padding: 3rem;
+}
+section.program > .title {
+    font-size: 5rem;
+    padding: 0 3rem 3rem 3rem;
+}
+section.program .title > div:first-child {
+    padding-left: 14rem;
 }
 section.course .title {
     font-size: 5rem;
@@ -606,6 +616,203 @@ section.after .after-item .img img {
 section.after .after-row:nth-child(2) > .after-item:last-child img.mobile {
     display: none;
 }
+section.program {
+    position: relative;
+    overflow: hidden;
+}
+section.program > .content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    padding: 0 25%;
+}
+section.program > .content .module-wrapper {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #C9C9C9;
+    border-bottom: 1px solid #C9C9C9;
+}
+section.program .module-wrapper > .header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+section.program .module-wrapper > .header .title {
+    font-size: 1.7rem;
+}
+section.program .module-wrapper > .header .num {
+    font-size: 1.6rem;
+}
+section.program .module-wrapper > .header .num span {
+    color: #F25B92;
+}
+section.program .module-wrapper .toggle-btn {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+section.program .module-wrapper .toggle-btn img {
+    width: 100%;
+    height: 100%;
+}
+.toggle-btn img {
+    transition: transform 1s ease;
+}
+.toggle-btn img.rotated {
+    transform: rotate(60deg);
+}
+section.program .module-wrapper > .details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+section.program .module-wrapper > .details > .top {
+    display: flex;
+    gap: 20%;
+}
+section.program .details > .top > .left,
+section.program .details > .top > .right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+section.program .details > .top > .left {
+    width: 40%;
+}
+section.program .details > .top > .right {
+    width: 40%;
+    padding-top: 1rem;
+}
+section.program .details > .top > .left > .list,
+section.program .details > .top > .right  > .extra-list {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+section.program .details > .top > .right  > .extra-list {
+    gap: 1.25rem;
+}
+section.program .details > .top .item {
+    display: flex;
+    gap: 1rem;
+}
+section.program .details > .top .extra-list .item {
+    gap: .5rem;
+}
+section.program .details > .top .item .num {
+    font-size: 1rem;
+    font-family: "Fixel Semibold", sans-serif;
+    width: 2rem;
+    height: 2rem;
+    min-width: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F25B92;
+    border-radius: 50%;
+    color: #FFFFFF;
+}
+section.program .details > .top .item .text {
+    font-size: .85rem;
+    align-self: center;
+    font-family: "Fixel Regular", sans-serif;
+}
+section.program .details > .top > .left > div:first-child,
+section.program .details > .top > .right > div:first-child {
+    color: #F25B92;
+    font-size: 1.2rem;
+}
+section.program .details > .top .item .circle {
+    width: .5rem;
+    height: .5rem;
+    min-width: .5rem;
+    background: #F25B92;
+    border-radius: 50%;
+}
+section.program .details > .bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+section.program .details > .bottom > div {
+    width: 100%;
+}
+section.program .details > .bottom > .bonus {
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 2rem 1rem 8rem;
+    border: 1px solid #C9C9C9;
+    position: relative;
+}
+section.program .details > .bottom > .bonus .abs {
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    left: -1rem;
+
+}
+section.program .details > .bottom > .bonus .abs img {
+    width: 100%;
+    height: 100%;
+}
+section.program .details > .bottom > .results {
+    padding: 3rem 5rem 2rem 4rem;
+}
+section.program .details > .bottom > .results {
+    display: flex;
+    gap: 2rem;
+}
+section.program .details > .bottom > .results > div:not(:first-child) {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+section.program .details > .bottom > .results .left,
+section.program .details > .bottom > .results .right {
+    padding-top: .5rem;
+}
+section.program .details > .bottom > .results .left .item,
+section.program .details > .bottom > .results .right .item {
+    font-size: .9rem;
+    line-height: 120%;
+    display: flex;
+    gap: .5rem;
+}
+section.program .details.hidden {
+    display: none;
+}
+.details {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 1.5s ease, opacity 1.5s ease;
+}
+
+.details.open {
+    max-height: 2000px;
+    opacity: 1;
+}
+section.program .button {
+    margin: 2rem auto 0 auto;
+}
+section.program > .abs {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 23rem;
+    height: 25rem;
+}
+section.program > .abs img {
+    width: 100%;
+    height: 100%;
+}
+section.program .module-wrapper .toggle-btn img.mobile {
+    display: none;
+}
 
 @media screen and (min-width: 2560px) and (max-width: 3840px) {
     html {
@@ -617,7 +824,8 @@ section.after .after-row:nth-child(2) > .after-item:last-child img.mobile {
     }
     header > .offer > .button,
     section.personal-brand .button,
-    section.author .button {
+    section.author .button,
+    section.program .button {
         font-size: 1.5rem;
     }
     section.for {
@@ -625,6 +833,13 @@ section.after .after-row:nth-child(2) > .after-item:last-child img.mobile {
     }
     section.author {
         padding-left: 15rem;
+    }
+    section.program > .content {
+        padding: 0 30%;
+    }
+    section.program > .abs {
+        width: 28rem;
+        height: 30rem;
     }
 }
 @media only screen and (min-width: 1921px) and (max-width: 2240px) {
@@ -677,6 +892,12 @@ section.after .after-row:nth-child(2) > .after-item:last-child img.mobile {
     section.after .right > .wrapper > .after-row {
         gap: 2rem;
     }
+    section.program > .content {
+        padding: 0 20%;
+    }
+    section.program > .abs {
+        right: -5rem;
+    }
 }
 @media only screen and (min-width: 1240px) and (max-width: 1600px) {
     html {
@@ -684,7 +905,8 @@ section.after .after-row:nth-child(2) > .after-item:last-child img.mobile {
     }
     header > .offer > .button,
     section.personal-brand .button,
-    section.author .button {
+    section.author .button,
+    section.program .button {
         height: 8rem;
     }
     header > .offer > .button {
@@ -699,7 +921,15 @@ section.after .after-row:nth-child(2) > .after-item:last-child img.mobile {
     section.after .right > .wrapper > .after-row {
         gap: 2rem;
     }
-
+    section.program > .content {
+        padding: 0 20%;
+        position: relative;
+        z-index: 1;
+    }
+    section.program > .abs {
+        right: -5rem;
+        z-index: -1;
+    }
 }
 @media only screen and (min-width: 1240px) and (max-width: 1440px) {
     section.personal-brand .title > .inner > div,
@@ -746,7 +976,8 @@ section.after .after-row:nth-child(2) > .after-item:last-child img.mobile {
     }
     header > .offer > .button,
     section.personal-brand .button,
-    section.author .button {
+    section.author .button,
+    section.program .button {
         height: 7.5rem;
     }
     header > .offer > .button {
@@ -757,7 +988,8 @@ section.after .after-row:nth-child(2) > .after-item:last-child img.mobile {
     }
     header > .offer > .button > span,
     section.personal-brand .button > span,
-    section.author .button > span {
+    section.author .button > span,
+    section.program .button > span {
         padding-top: 2.5rem;
     }
     section.for > .content .right .for-item {
@@ -820,7 +1052,18 @@ section.after .after-row:nth-child(2) > .after-item:last-child img.mobile {
         gap: 1rem;
     }
 }
-
+@media only screen and (max-width: 1239px) {
+    section.program > .content {
+        padding: 0 10%;
+        position: relative;
+        z-index: 1;
+    }
+    section.program > .abs {
+        right: -8rem;
+        top: -4rem;
+        z-index: -1;
+    }
+}
 @media only screen and (min-width: 830px) and (max-width: 1023px) {
     html {
         font-size: 14px;
@@ -851,7 +1094,8 @@ section.after .after-row:nth-child(2) > .after-item:last-child img.mobile {
     }
     header > .offer > .button,
     section.personal-brand .button,
-    section.author .button {
+    section.author .button,
+    section.program .button {
         height: 7.5rem;
     }
     header > .offer > .button {
@@ -859,7 +1103,8 @@ section.after .after-row:nth-child(2) > .after-item:last-child img.mobile {
     }
     header > .offer > .button > span,
     section.personal-brand .button > span,
-    section.author .button > span {
+    section.author .button > span,
+    section.program .button > span {
         padding-top: 2.5rem;
     }
     header > .title-wrapper > .title-offer {
@@ -906,7 +1151,8 @@ section.after .after-row:nth-child(2) > .after-item:last-child img.mobile {
         margin-top: 6rem;
     }
     section.personal-brand .button,
-    section.author .button {
+    section.author .button,
+    section.program .button {
         max-width: 25rem;
     }
     section.author {
@@ -953,6 +1199,7 @@ section.after .after-row:nth-child(2) > .after-item:last-child img.mobile {
     section.after .right > .wrapper > .after-row {
         gap: 1rem;
     }
+
 }
 @media only screen and (max-width: 829px) {
     html {
@@ -1004,7 +1251,8 @@ section.after .after-row:nth-child(2) > .after-item:last-child img.mobile {
     }
     header > .offer > .button,
     section.personal-brand .button,
-    section.author .button {
+    section.author .button,
+    section.program .button {
         max-width: 450px;
         height: 7rem;
     }
@@ -1014,7 +1262,8 @@ section.after .after-row:nth-child(2) > .after-item:last-child img.mobile {
     }
     header > .offer > .button > span,
     section.personal-brand .button > span,
-    section.author .button > span {
+    section.author .button > span,
+    section.program .button > span {
         padding-top: 2.5rem;
     }
     header > .offer .offer-text br {
@@ -1227,6 +1476,63 @@ section.after .after-row:nth-child(2) > .after-item:last-child img.mobile {
     section.after .title > div {
         font-size: 4.5rem;
     }
+    section.program > .content {
+        padding: 0 10%;
+    }
+    section.program > .abs {
+        display: none;
+    }
+    section.program .module-wrapper > .header .num {
+        font-size: 1.2rem;
+    }
+    section.program .module-wrapper > .header .title {
+        font-size: 1.2rem;
+    }
+    section.program .details > .top > .left > div:first-child, section.program .details > .top > .right > div:first-child {
+        font-size: 1.1rem;
+    }
+    section.program .module-wrapper > .details > .top {
+        gap: 1.5rem;
+        flex-direction: column;
+    }
+    section.program .details > .top > .left,
+    section.program .details > .top > .right {
+        width: 100%;
+    }
+    section.program .details > .bottom > .results {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+        padding: 2rem 3rem 1.5rem 3rem;
+    }
+    section.program .module-wrapper > .details {
+        padding-left: 1rem;
+    }
+    section.program .module-wrapper .toggle-btn {
+        width: 3rem;
+        height: 3rem;
+        background: #1D1D1D;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    section.program .module-wrapper .toggle-btn img.mobile {
+        display: block;
+    }
+    section.program .module-wrapper .toggle-btn img:not(.mobile) {
+        display: none;
+    }
+    section.program .module-wrapper .toggle-btn img {
+        width: 1rem;
+        height: 1rem;
+    }
+    section.program .module-wrapper:first-child .toggle-btn {
+        background: #F25B92;
+    }
+    section.program .title > div:first-child {
+        padding-left: 7rem;
+    }
 }
 @media only screen and (max-width: 600px) {
     header > .info-top > .start-date {
@@ -1288,7 +1594,8 @@ section.after .after-row:nth-child(2) > .after-item:last-child img.mobile {
         font-weight: 700;
     }
     section.personal-brand .button,
-    section.author .button {
+    section.author .button,
+    section.program .button {
         width: 80vw;
     }
     section.personal-brand .inner .benefit .img {
@@ -1339,6 +1646,15 @@ section.after .after-row:nth-child(2) > .after-item:last-child img.mobile {
         margin: 0;
         text-align: end;
     }
+    section.program > .content {
+        padding: 0 1rem;
+    }
+    section.program .title > div:first-child {
+        padding-left: 4rem;
+    }
+    section.program .title > div {
+        font-size: 4rem;
+    }
 }
 @media only screen and (max-width: 500px) {
     section.personal-brand .title > .inner > .abs {
@@ -1363,6 +1679,9 @@ section.after .after-row:nth-child(2) > .after-item:last-child img.mobile {
     }
     section.after .title > div {
         font-size: 3.25rem;
+    }
+    section.program .title > div {
+        font-size: 3.5rem;
     }
 }
 @media only screen and (max-width: 420px) {
@@ -1389,6 +1708,16 @@ section.after .after-row:nth-child(2) > .after-item:last-child img.mobile {
     }
     section.after {
         padding: 3rem .5rem;
+    }
+    section.program .module-wrapper .toggle-btn {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    section.program .module-wrapper > .header {
+        gap: 1rem;
+    }
+    section.program .module-wrapper > .header .num {
+        white-space: nowrap;
     }
 }
 @media only screen and (max-width: 359px) {
