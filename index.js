@@ -71,3 +71,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+//SWIPER
+
+const swiper = new Swiper('.modules-swiper', {
+    slidesPerView: 4.2,
+    spaceBetween: 20,
+    loop: true,
+    freeMode: {
+        enabled: true,
+        momentum: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+
+
+

@@ -813,6 +813,66 @@ section.program > .abs img {
 section.program .module-wrapper .toggle-btn img.mobile {
     display: none;
 }
+section.exmaples {
+    padding-left: 3rem;
+}
+section.exmaples .swiper-wrapper {
+    display: flex;
+}
+section.exmaples .swiper-wrapper .swiper-slide {
+}
+section.exmaples .swiper-wrapper .swiper-slide img {
+    width: 100%;
+    height: 100%;
+}
+.modules-swiper .swiper-wrapper {
+    padding-right: 10%; /* makes the 5th slide peek on the right */
+}
+
+.modules-swiper .swiper-slide img {
+    width: 100%;
+    display: block;
+}
+.swiper-navigation {
+    height: 4rem !important;
+    margin: 2rem 0 1rem 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: flex-end;
+}
+.swiper-button-next, .swiper-button-prev {
+    width: 4rem;
+    height: 4rem;
+    min-width: 4rem;
+    min-height: 4rem;
+    border-radius: 50%;
+    background: #F25B92;
+    margin-top: 0 !important;
+    position: initial !important;
+    padding: 1rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.swiper-button-next::after, .swiper-button-prev::after {
+    content: none !important;
+}
+.swiper-button-next img, .swiper-button-prev img {
+    width: 2rem;
+    height: 2rem;
+}
+.swiper-button-next img {
+    transform: rotate(180deg);
+}
+section.exmaples > .title {
+    font-size: 5rem;
+    padding: 3rem 0 2rem 0;
+}
+section.exmaples > .title > div:last-child {
+    font-size: 2rem;
+}
 
 @media screen and (min-width: 2560px) and (max-width: 3840px) {
     html {
