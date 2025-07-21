@@ -641,7 +641,8 @@ section.program .module-wrapper > .header {
     padding: 2rem 0;
 }
 section.program .module-wrapper > .header .title {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
+    text-align: center;
 }
 section.program .module-wrapper > .header .num {
     font-size: 1.6rem;
@@ -873,7 +874,73 @@ section.exmaples > .title {
 section.exmaples > .title > div:last-child {
     font-size: 2rem;
 }
+section.extra > .title {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+section.extra {
+    position: relative;
+}
+section.extra > div:not(.img-mobile) {
+    padding: 3rem;
+}
+section.extra > .title {
 
+}
+section.extra > .title > .inner {
+    font-size: 5rem;
+    width: 50%;
+}
+section.extra > .title > .inner > div {
+    width: 100%;
+}
+section.extra > .title > .inner> div:first-child,
+section.extra > .title > .inner > div:last-child {
+    text-align: end;
+}
+section.extra > .content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 2rem;
+}
+section.extra > .content > .row {
+    padding: 1.5rem 2rem 1rem 2rem;
+    border-top: 1px solid #C9C9C9;
+    border-bottom: 1px solid #C9C9C9;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+section.extra > .content > .row > div {
+    flex: 1;
+    display: flex;
+    gap: 1.5rem;
+}
+section.extra > .content > .row .text {
+    font-size: .9rem;
+    line-height: 120%;
+}
+section.extra > .content > .row img {
+    width: 1.2rem;
+    min-width: 1.2rem;
+    height: 1.2rem;
+}
+section.extra > .title .abs {
+    position: absolute;
+    height: auto;
+    width: 50%;
+    left: 0;
+    top: 0;
+}
+section.extra > .title .abs img {
+    width: 100%;
+    height: 100%;
+}
+section.extra > .img-mobile {
+    display: none;
+}
 @media screen and (min-width: 2560px) and (max-width: 3840px) {
     html {
         font-size: 24px;
@@ -989,6 +1056,15 @@ section.exmaples > .title > div:last-child {
     section.program > .abs {
         right: -5rem;
         z-index: -1;
+    }
+    section.program .details > .bottom > .results {
+        padding: 2rem 3.5rem 1.5rem 3rem;
+    }
+    section.extra > .title > .inner {
+        font-size: 4rem;
+    }
+    section.extra > .title .abs {
+        width: 55%;
     }
 }
 @media only screen and (min-width: 1240px) and (max-width: 1440px) {
@@ -1111,6 +1187,15 @@ section.exmaples > .title > div:last-child {
     section.after .right > .wrapper > .after-row {
         gap: 1rem;
     }
+    section.extra > .title > .inner {
+        font-size: 3.5rem;
+    }
+    section.extra > .title .abs {
+        width: 55%;
+    }
+    section.extra > .content > .row {
+        padding: 1.5rem 1.25rem 1rem 1.25rem;
+    }
 }
 @media only screen and (max-width: 1239px) {
     section.program > .content {
@@ -1122,6 +1207,9 @@ section.exmaples > .title > div:last-child {
         right: -8rem;
         top: -4rem;
         z-index: -1;
+    }
+    section.program .details > .bottom > .results {
+        padding: 2rem 3.5rem 1.5rem 3rem;
     }
 }
 @media only screen and (min-width: 830px) and (max-width: 1023px) {
@@ -1259,7 +1347,24 @@ section.exmaples > .title > div:last-child {
     section.after .right > .wrapper > .after-row {
         gap: 1rem;
     }
-
+    section.extra > .title > .inner {
+        font-size: 3rem;
+    }
+    section.extra > .title .abs {
+        width: 49%;
+        left: 0;
+        top: -1.5rem;
+    }
+    section.extra > .content > .row .text br {
+        display: none;
+    }
+}
+@media only screen and (min-width: 830px) and (max-width: 940px) {
+    section.extra > .title .abs {
+        width: 45%;
+        left: 0;
+        top: 1.5rem;
+    }
 }
 @media only screen and (max-width: 829px) {
     html {
@@ -1546,7 +1651,7 @@ section.exmaples > .title > div:last-child {
         font-size: 1.2rem;
     }
     section.program .module-wrapper > .header .title {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     section.program .details > .top > .left > div:first-child, section.program .details > .top > .right > div:first-child {
         font-size: 1.1rem;
@@ -1592,6 +1697,52 @@ section.exmaples > .title > div:last-child {
     }
     section.program .title > div:first-child {
         padding-left: 7rem;
+    }
+    section.extra > .title > .inner {
+        font-size: 3rem;
+    }
+    section.extra > .title > .inner {
+        width: 80%;
+    }
+    section.extra > .title .abs {
+        width: 50%;
+        top: 7rem;
+    }
+    section.extra > .title > .inner > div:nth-child(2),
+    section.extra > .title > .inner > div:nth-child(3) {
+        text-align: center;
+    }
+    section.extra > .content > .row {
+        flex-wrap: wrap;
+        padding: 0;
+        border: none;
+    }
+    section.extra > .content > .row:first-child > div:nth-child(2) {
+        order: 1;
+    }
+    section.extra > .content > .row > div {
+        width: calc(50% - 1rem);
+        flex: auto;
+        order: 2;
+    }
+    section.extra > .content > .row > div .text {
+        padding-top: 1px;
+    }
+    section.extra > .content > .row > div span {
+        font-family: "Fixel Semibold", sans-serif;
+    }
+    section.extra > .content > .row img {
+        width: .8rem;
+        min-width: .8rem;
+        height: .8rem;
+    }
+    section.extra > .img-mobile {
+        width: 100%;
+        display: block;
+        margin-top: -45%;
+    }
+    section.extra > .img-mobile img {
+        width: 100%;
     }
 }
 @media only screen and (max-width: 600px) {
@@ -1737,6 +1888,21 @@ section.exmaples > .title > div:last-child {
     .swiper-navigation {
         gap: .5rem;
     }
+    section.extra > div:not(.img-mobile) {
+        padding: 3rem 1rem;
+    }
+    section.extra > .title > .inner {
+        width: 100%;
+    }
+    section.extra > .title > .inner> div:first-child {
+        text-align: left;
+    }
+    section.extra > .title > .inner> div:not(:first-child) {
+        text-align: end;
+    }
+    section.extra > .title .abs {
+        top: 12rem;
+    }
 }
 @media only screen and (max-width: 500px) {
     section.personal-brand .title > .inner > .abs {
@@ -1764,6 +1930,10 @@ section.exmaples > .title > div:last-child {
     }
     section.program .title > div {
         font-size: 3.5rem;
+    }
+    section.extra > .content > .row,
+    section.extra > .content {
+        gap: 1rem;
     }
 }
 @media only screen and (max-width: 420px) {

@@ -102,6 +102,10 @@ const swiper = new Swiper('.modules-swiper', {
             slidesPerView: 1.75,
             spaceBetween: 8,
         },
+        320: {
+            slidesPerView: 1.2,
+            spaceBetween: 8,
+        }
     },
 });
 
