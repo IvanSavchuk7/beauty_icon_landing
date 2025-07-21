@@ -1715,6 +1715,28 @@ section.exmaples > .title > div:last-child {
     section.program .title > div {
         font-size: 4rem;
     }
+    section.exmaples > .title > div:last-child {
+        font-size: 1.5rem;
+    }
+    section.exmaples > .title {
+        font-size: 4rem;
+    }
+    section.exmaples {
+        padding-left: 1rem;
+    }
+    .swiper-button-next, .swiper-button-prev {
+        width: 3rem;
+        height: 3rem;
+        min-width: 3rem;
+        min-height: 3rem;
+    }
+    .swiper-button-next img, .swiper-button-prev img {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .swiper-navigation {
+        gap: .5rem;
+    }
 }
 @media only screen and (max-width: 500px) {
     section.personal-brand .title > .inner > .abs {

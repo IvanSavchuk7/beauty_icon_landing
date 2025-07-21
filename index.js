@@ -85,6 +85,24 @@ const swiper = new Swiper('.modules-swiper', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
+    breakpoints: {
+        1240: {
+            slidesPerView: 4.2,
+            spaceBetween: 20,
+        },
+        830: {
+            slidesPerView: 3.2,
+            spaceBetween: 16,
+        },
+        600: {
+            slidesPerView: 2.2,
+            spaceBetween: 12,
+        },
+        400: {
+            slidesPerView: 1.75,
+            spaceBetween: 8,
+        },
+    },
 });
 
 
