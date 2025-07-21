@@ -51,6 +51,7 @@
 .bg-light-pink {background-color: #FF70A4;}
 .bg-grey {background-color: rgba(255, 255, 255, 0.26);}
 .bg-black {background-color: #1D1D1D;}
+.bg-dark-pink {background-color: #dd3b76;}
 
 html {
     font-size: 20px;
@@ -179,7 +180,8 @@ header > .offer .button ,
 section.personal-brand .button,
 section.author .button,
 section.program .button,
-section.benefits .button {
+section.benefits .button,
+section.for .button {
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -196,20 +198,27 @@ section.benefits .button {
 section.personal-brand .button,
 section.author .button,
 section.program .button,
-section.benefits .button {
+section.benefits .button,
+section.for .button {
     width: 25rem;
 }
-section.personal-brand .button {
+section.personal-brand .button,
+section.for .button {
     margin: 2rem auto;
+}
+section.author .button:first-child {
+    align-self: center;
+    margin-right: 6rem;
 }
 header > .offer > .button > span,
 section.personal-brand .button > span,
 section.author .button > span,
 section.program .button > span,
-section.benefits .button > span {
+section.benefits .button > span,
+section.for .button > span {
     width: 100%;
     height: 100%;
-    padding-top:3.1rem;
+    padding-top: 2.8rem;
     padding-left: 1rem;
     text-align: center;
 }
@@ -271,6 +280,7 @@ section.for .for-item .topic-wrapper .topic {
 section.for .for-item .topic-wrapper .topic .number {
     height: 4.5rem;
     width: 3rem;
+    min-width: 3rem;
 }
 section.for .for-item .topic-wrapper .topic .text {
     font-size: 1.2rem;
@@ -477,6 +487,10 @@ section.author {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    background-image: url("assets/images/author-bg.webp");
+    background-size: 70% 70%;
+    background-repeat: no-repeat;
+    background-position: 120% 25%;
 }
 section.author > .content {
     display: flex;
@@ -546,7 +560,7 @@ section.author .left > .achievements .num {
 section.author .left > .achievements .text {
     line-height: 120%;
 }
-section.author .button {
+section.author .button:last-child {
     align-self: flex-end;
 }
 section.author .img-mobile {
@@ -656,6 +670,7 @@ section.program .module-wrapper > .header .num span {
 section.program .module-wrapper .toggle-btn {
     width: 1.5rem;
     height: 1.5rem;
+    min-width: 1.5rem;
 }
 section.program .module-wrapper .toggle-btn img {
     width: 100%;
@@ -981,7 +996,8 @@ section.tariffs > .content > .basic .name .abs {
     width: 10rem;
     height: 11rem;
 }
-section.tariffs > .content > .pro .name .abs {
+section.tariffs > .content > .pro .name .abs,
+section.tariffs > .content > .light .name .abs {
     width: 12rem;
     height: 10rem;
 }
@@ -1019,7 +1035,10 @@ section.tariffs .includes > .list > .available > .item,
 section.tariffs .includes > .list > .unavailable > .item {
     display: flex;
     gap: .5rem;
-    align-items: center;
+}
+section.tariffs .basic .includes > .list > .unavailable > .item:last-child,
+section.tariffs .light .includes > .list > .unavailable > .item:last-child {
+    opacity: 0;
 }
 section.tariffs .includes > .list > .available > .item > .dot,
 section.tariffs .includes > .list > .unavailable > .item > .dot {
@@ -1036,14 +1055,19 @@ section.tariffs .includes > .list > .unavailable > .item > .dot {
     font-family: "Fixel Semibold", sans-serif;
     font-size: .7rem;
 }
-section.tariffs .pro .available > .item:nth-last-child(-n+5) > .dot,
-section.tariffs .star .available > .item:nth-last-child(-n+6) > .dot {
+section.tariffs .pro .available > .item:nth-last-child(-n+2) > .dot,
+section.tariffs .star .available > .item:nth-last-child(-n+3) > .dot,
+section.tariffs .light .available > .item:nth-last-child(-n+6) > .dot{
     background-color: #F25B92;
 }
 section.tariffs .includes > .list > .available > .item > .text,
 section.tariffs .includes > .list > .unavailable > .item > .text {
     font-size: .9rem;
     font-family: "Fixel Regular", sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
 }
 section.tariffs .includes > .list > .unavailable > .item > .dot {
     transform: rotate(45deg);
@@ -1193,6 +1217,9 @@ section.qa .content {
     flex-direction: column;
     gap: 2rem;
 }
+section.author .content .author-text br.mobile {
+    display: none;
+}
 section.qa .content > .question-wrapper {
     display: flex;
     width: fit-content;
@@ -1232,6 +1259,9 @@ section.qa .content > .text-bottom {
     text-align: center;
     margin-top: 1rem;
 }
+section.for .button {
+    display: none;
+}
 footer {
     padding: 7.5rem 3rem 0 3rem;
     display: flex;
@@ -1270,7 +1300,12 @@ section.qa .help-btn .text {
     display: flex;
     align-items: center;
 }
-
+section.author .content .author-text .abs-mobile {
+    display: none;
+}
+section.after .img-mobile {
+    display: none;
+}
 @media screen and (min-width: 2560px) and (max-width: 3840px) {
     html {
         font-size: 24px;
@@ -1283,7 +1318,8 @@ section.qa .help-btn .text {
     section.personal-brand .button,
     section.author .button,
     section.program .button,
-    section.benefits .button {
+    section.benefits .button,
+    section.for .button {
         font-size: 1.5rem;
     }
     section.for {
@@ -1365,7 +1401,8 @@ section.qa .help-btn .text {
     section.personal-brand .button,
     section.author .button,
     section.program .button,
-    section.benefits .button {
+    section.benefits .button,
+    section.for .button {
         height: 8rem;
     }
     header > .offer > .button {
@@ -1452,7 +1489,8 @@ section.qa .help-btn .text {
     section.personal-brand .button,
     section.author .button,
     section.program .button,
-    section.benefits .button {
+    section.benefits .button,
+    section.for .button {
         height: 7.5rem;
     }
     header > .offer > .button {
@@ -1613,7 +1651,8 @@ section.qa .help-btn .text {
     section.personal-brand .button,
     section.author .button,
     section.program .button,
-    section.benefits .button {
+    section.benefits .button,
+    section.for .button {
         height: 7.5rem;
     }
     header > .offer > .button {
@@ -1672,7 +1711,8 @@ section.qa .help-btn .text {
     section.personal-brand .button,
     section.author .button,
     section.program .button,
-    section.benefits .button {
+    section.benefits .button,
+    section.for .button {
         max-width: 25rem;
     }
     section.author {
@@ -1805,7 +1845,8 @@ section.qa .help-btn .text {
     section.personal-brand .button,
     section.author .button,
     section.program .button,
-    section.benefits .button {
+    section.benefits .button,
+    section.for .button {
         max-width: 450px;
         height: 7rem;
     }
@@ -1817,8 +1858,12 @@ section.qa .help-btn .text {
     section.personal-brand .button > span,
     section.author .button > span,
     section.program .button > span,
-    section.benefits .button > span {
-        padding-top: 2.5rem;
+    section.benefits .button > span,
+    section.for .button > span {
+        padding-top: 2rem;
+    }
+    section.for .button {
+        display: flex;
     }
     header > .offer .offer-text br {
         display: block !important;
@@ -1929,6 +1974,7 @@ section.qa .help-btn .text {
     section.author {
         overflow: hidden;
         padding: 3rem;
+        background: none;
     }
     section.author .content .right {
         display: none;
@@ -1937,6 +1983,41 @@ section.qa .help-btn .text {
         width: 100%;
         align-items: center;
         gap: 2rem;
+    }
+    section.author .content {
+        background-image: url("assets/images/author-bg.webp");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 50% 0;
+    }
+    section.author .content .left .author-text {
+        position: relative;
+    }
+    section.author .content .author-text .abs-mobile {
+        position: absolute;
+        width: 10rem;
+        height: 10rem;
+        top: -3rem;
+        left: calc(100% - 6rem);
+        transform: translateX(-50%);
+    }
+    section.author .button {
+        align-self: center !important;
+    }
+    section.author .button:first-child {
+        margin-right: 0;
+    }
+    section.after .img-mobile {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    section.after .img-mobile img {
+        width: 100%;
+    }
+    section.author .content .author-text .abs-mobile img {
+        width: 100%;
+        height: 100%;
     }
     section.author .content .left .img-mobile {
         display: flex;
@@ -1974,6 +2055,10 @@ section.qa .help-btn .text {
     }
     section.after {
         padding: 3rem 1rem;
+    }
+    section.after > div:not(.img-mobile) {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
     section.after .right > .wrapper > .after-row:not(:nth-child(2)) {
         border: none;
@@ -2062,9 +2147,13 @@ section.qa .help-btn .text {
     section.program .module-wrapper > .details {
         padding-left: 1rem;
     }
+    section.program .module-wrapper > .header .title br {
+        display: none;
+    }
     section.program .module-wrapper .toggle-btn {
         width: 3rem;
         height: 3rem;
+        min-width: 3rem;
         background: #1D1D1D;
         border-radius: 50%;
         display: flex;
@@ -2224,11 +2313,20 @@ section.qa .help-btn .text {
     section.qa .title {
         font-size: 4rem;
     }
+    header > .title-wrapper > .title-offer {
+        padding-top: 1rem;
+    }
+    header > .title-wrapper > .title-offer br {
+        display: none;
+    }
 }
 @media only screen and (max-width: 600px) {
     header > .info-top > .start-date {
         padding: 2rem 0 0 0;
         background: transparent;
+    }
+    section.extra > .content > .row > div .text br {
+        display: none;
     }
     header > .info-top > .start-date > div {
         color: #1D1D1D;
@@ -2305,7 +2403,7 @@ section.qa .help-btn .text {
         width: 100%;
     }
     section.author .left > .author-text .about {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
     section.author .left > .achievements {
         flex-direction: column;
@@ -2315,6 +2413,9 @@ section.qa .help-btn .text {
         width: 100%;
         padding-left: 1rem;
         padding-right: 1rem;
+    }
+    section.author .content .author-text br.mobile {
+        display: block;
     }
     section.author .left > .achievements > div br {
         display: none;
@@ -2357,10 +2458,10 @@ section.qa .help-btn .text {
         padding-left: 1rem;
     }
     .swiper-button-next, .swiper-button-prev {
-        width: 3rem;
-        height: 3rem;
-        min-width: 3rem;
-        min-height: 3rem;
+        width: 4rem;
+        height: 4rem;
+        min-width: 4rem;
+        min-height: 4rem;
     }
     .swiper-button-next img, .swiper-button-prev img {
         width: 1.5rem;
@@ -2416,9 +2517,15 @@ section.qa .help-btn .text {
     section.qa .content > .help-btn .text {
         font-size: 1.5rem;
     }
+    footer .links {
+        gap: 1.5rem;
+    }
     footer .icon-wrapper a {
-        width: 3.5rem;
-        height: 3.5rem;
+        width: 4rem;
+        height: 4rem;
+    }
+    footer .links > a {
+        font-size: 1.1rem;
     }
     footer {
         padding: 5rem 3rem 0 3rem;
@@ -2510,11 +2617,16 @@ section.qa .help-btn .text {
         font-size: 2.75rem;
     }
     section.after {
-        padding: 3rem .5rem;
+        padding: 3rem 0;
+    }
+    section.after > div:not(.img-mobile) {
+        padding-left: .5rem;
+        padding-right: .5rem;
     }
     section.program .module-wrapper .toggle-btn {
         width: 2.5rem;
         height: 2.5rem;
+        min-width: 2.5rem;
     }
     section.program .module-wrapper > .header {
         gap: 1rem;
