@@ -80,8 +80,21 @@ header {
     display: flex;
     flex-direction: column;
     padding: 0;
+    position: relative;
 }
-header > div {
+header > .abs {
+    position: absolute;
+    width: 12rem;
+    height: 12rem;
+    left: 105%;
+    top: 5rem;
+    transform: translateX(-100%);
+}
+header > .abs img {
+    width: 100%;
+    height: 100%;
+}
+header > div:not(.abs) {
     padding-left: 3rem;
     padding-right: 3rem;
 }
@@ -1481,6 +1494,15 @@ section.after .img-mobile {
         padding: 1.25rem 5rem;
     }
 }
+@media only screen and (min-width: 830px) and (max-width: 1440px) {
+    section.tariffs > .content {
+        flex-wrap: wrap;
+    }
+    section.tariffs > .content > div {
+        width: calc(50% - 1rem);
+        flex: none;
+    }
+}
 @media only screen and (min-width: 1024px) and (max-width: 1239px) {
     html {
         font-size: 16px;
@@ -2244,6 +2266,9 @@ section.after .img-mobile {
         "black-1 image-2"
         "image-3 white-2";
         margin-top: 3rem;
+    }
+    header > .abs {
+        display: none;
     }
     section.benefits .container .image-1{
         display: none;
