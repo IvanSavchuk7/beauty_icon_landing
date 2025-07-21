@@ -1181,6 +1181,95 @@ section.benefits > .title .abs img {
     width: 100%;
     height: 100%;
 }
+section.qa {
+    padding: 5rem 3rem;
+}
+section.qa .title {
+    font-size: 5rem;
+    text-align: center;
+}
+section.qa .content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+section.qa .content > .question-wrapper {
+    display: flex;
+    width: fit-content;
+    margin: -3rem auto 0 auto;
+    gap: 2rem;
+}
+section.qa .content > .question-wrapper .left {
+    align-self: center;
+}
+section.qa .content > .question-wrapper .right {
+    align-self: flex-end;
+    padding-bottom: 2rem;
+}
+section.qa .content > .question-wrapper .center {
+    flex: 2;
+}
+section.qa .content > .question-wrapper .center img {
+    width: 100%;
+    height: 100%;
+}
+section.qa .content > .help-text {
+    margin: auto;
+    font-size: 2rem;
+}
+section.qa .content > .help-btn {
+    width: fit-content;
+    border-radius: 800px;
+    padding: 1.75rem 7.5rem;
+    display: flex;
+    margin: auto;
+    gap: 1rem;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+section.qa .content > .text-bottom {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+footer {
+    padding: 7.5rem 3rem 0 3rem;
+    display: flex;
+    flex-direction: column;
+}
+footer .icon-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+footer .icon-wrapper a {
+    width: 2.75rem;
+    height: 2.75rem;
+}
+footer .icon-wrapper a img {
+    width: 100%;
+    height: 100%;
+}
+footer .links {
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+footer .links > a {
+    color: #A0A0A0;
+}
+footer .beauty-text {
+    font-size: calc(100vw / 4.35);
+    text-align: center;
+    margin-bottom: calc((100vw / 4) / 4 * -1);
+    margin-top: -2rem;
+}
+section.qa .help-btn .text {
+    display: flex;
+    align-items: center;
+}
 
 @media screen and (min-width: 2560px) and (max-width: 3840px) {
     html {
@@ -1348,6 +1437,12 @@ section.benefits > .title .abs img {
     section.after > .content > .right {
         width: 65%;
     }
+    section.qa {
+        padding: 5rem 10rem;
+    }
+    section.qa .content > .help-btn {
+        padding: 1.25rem 5rem;
+    }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1239px) {
     html {
@@ -1447,6 +1542,7 @@ section.benefits > .title .abs img {
     section.benefits .container > div .text > .description {
         font-size: .9rem;
     }
+
 }
 @media only screen and (max-width: 1239px) {
     section.program > .content {
@@ -1471,7 +1567,19 @@ section.benefits > .title .abs img {
     section.tariffs .content .btns > a {
         font-size: .9rem;
     }
-    section.tariffs .content .btns > a img
+    section.qa {
+        padding: 4rem 5rem;
+    }
+    section.qa .content > .help-btn {
+        padding: 1.25rem 5rem;
+    }
+    section.qa .content > .question-wrapper .right,
+    section.qa .content > .question-wrapper .left {
+        font-size: 1.1rem;
+    }
+    section.qa .content > .question-wrapper {
+        gap: 1rem;
+    }
 }
 @media only screen and (min-width: 830px) and (max-width: 1023px) {
     html {
@@ -2070,6 +2178,52 @@ section.benefits > .title .abs img {
         height: 15rem;
         transform: translate(-50%, -50%);
     }
+    section.qa .content > .question-wrapper {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    section.qa .content > .question-wrapper > div {
+        order: 2;
+        width: 50%;
+    }
+    section.qa .content > .question-wrapper > div br {
+        display: none;
+    }
+    section.qa .content > .question-wrapper > .center {
+        order: 1;
+        max-width: 450px;
+    }
+    section.qa .content > .question-wrapper > .left {
+        align-self: baseline;
+    }
+    section.qa .content > .question-wrapper > .right {
+        align-self: flex-end;
+        font-family: "Fixel Semibold", sans-serif;
+    }
+    section.qa .content > .help-btn {
+        padding: 1.75rem 7.5rem;
+    }
+    section.qa .content > .help-btn .text {
+        font-size: 1.75rem;
+    }
+    section.qa .content > .text-bottom br {
+        display: none;
+    }
+    section.qa .content > .text-bottom span:last-child {
+        font-family: "Fixel Semibold", sans-serif;
+    }
+    section.qa .content > .text-bottom span:first-child {
+        display: block;
+        text-align: end;
+    }
+    section.qa {
+        padding: 4rem 3rem;
+    }
+    section.qa .title {
+        font-size: 4rem;
+    }
 }
 @media only screen and (max-width: 600px) {
     header > .info-top > .start-date {
@@ -2256,6 +2410,35 @@ section.benefits > .title .abs img {
         width: 100%;
         align-items: center;
     }
+    section.qa .content > .help-btn {
+        padding: 1.75rem 7.5rem;
+    }
+    section.qa .content > .help-btn .text {
+        font-size: 1.5rem;
+    }
+    footer .icon-wrapper a {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    footer {
+        padding: 5rem 3rem 0 3rem;
+    }
+    section.qa .content > .question-wrapper .right, section.qa .content > .question-wrapper .left {
+        font-size: 1.2rem;
+        width: 60%;
+    }
+    section.qa .title {
+        font-size: 3.25rem;
+    }
+    section.qa .content > .question-wrapper {
+        margin-top: -2rem;
+    }
+    footer .beauty-text {
+        margin-top: 0;
+    }
+    section.qa {
+        padding: 4rem 1rem;
+    }
 }
 @media only screen and (max-width: 500px) {
     section.personal-brand .title > .inner > .abs {
@@ -2263,6 +2446,12 @@ section.benefits > .title .abs img {
     }
     section.personal-brand .title > .inner > .abs img {
         height: 25vw;
+    }
+    section.qa .content > .text-bottom {
+        font-size: 1.5rem;
+    }
+    section.qa .title {
+        font-size: 3rem;
     }
 }
 @media only screen and (max-width: 480px) {
@@ -2290,6 +2479,12 @@ section.benefits > .title .abs img {
     }
     section.tariffs {
         padding: 3rem 1rem;
+    }
+    section.qa .content > .help-btn {
+        padding: 1.25rem 5rem;
+    }
+    section.qa .content > .help-text {
+        font-size: 1.75rem;
     }
 }
 @media only screen and (max-width: 420px) {
