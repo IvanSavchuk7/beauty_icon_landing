@@ -442,6 +442,10 @@ section.personal-brand {
     display: flex;
     flex-direction: column;
     padding-top: 3rem;
+    background-image: url("assets/images/personal-brand-bg.png");
+    background-position: 0 10%;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 section.personal-brand .title > .inner {
     display: flex;
@@ -1320,6 +1324,8 @@ footer .links {
 }
 footer .links > a {
     color: #A0A0A0;
+    position: relative;
+    z-index: 1000;
 }
 section.course .grid .pink-2 img.mobile,
 section.course .grid .white-3 img.mobile {
@@ -1916,6 +1922,11 @@ section.tariffs .light .item > .text .list .dot-round {
     header > .offer > .heart-wrapper {
         display: none;
     }
+    section.personal-brand {
+        background-position: -70% 0;
+        background-repeat: no-repeat;
+        background-size: 70% 70%;
+    }
     header > .offer > .button,
     section.personal-brand .button,
     section.author .button,
@@ -2489,6 +2500,11 @@ section.tariffs .light .item > .text .list .dot-round {
     header > .info-top > .start-date > div {
         color: #1D1D1D;
     }
+    section.personal-brand {
+        background-position: -30% 0;
+        background-repeat: no-repeat;
+        background-size: 80% 60%;
+    }
     section.for .title {
         width: 100%;
     }
@@ -2742,6 +2758,11 @@ section.tariffs .light .item > .text .list .dot-round {
         white-space: nowrap;
         font-size: 1.2rem;
         padding: 1.5rem 2.5rem 1.5rem 1rem;
+    }
+    section.personal-brand {
+        background-position: -70% 0;
+        background-repeat: no-repeat;
+        background-size: 80% 50%;
     }
 }
 @media only screen and (max-width: 480px) {
