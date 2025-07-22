@@ -658,7 +658,6 @@ section.program {
 section.program > .content {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
     width: 100%;
     padding: 0 25%;
 }
@@ -708,6 +707,7 @@ section.program .module-wrapper > .details {
 section.program .module-wrapper > .details > .top {
     display: flex;
     gap: 20%;
+    padding-left: 1rem;
 }
 section.program .details > .top > .left,
 section.program .details > .top > .right {
@@ -716,11 +716,7 @@ section.program .details > .top > .right {
     gap: 1rem;
 }
 section.program .details > .top > .left {
-    width: 40%;
-}
-section.program .details > .top > .right {
-    width: 40%;
-    padding-top: 1rem;
+    width: 70%;
 }
 section.program .details > .top > .left > .list,
 section.program .details > .top > .right  > .extra-list {
@@ -754,7 +750,7 @@ section.program .details > .top .item .num {
     color: #FFFFFF;
 }
 section.program .details > .top .item .text {
-    font-size: .85rem;
+    font-size: 1rem;
     align-self: center;
     font-family: "Fixel Regular", sans-serif;
 }
@@ -823,7 +819,7 @@ section.program .details > .bottom > .results .right {
 }
 section.program .details > .bottom > .results .left .item,
 section.program .details > .bottom > .results .right .item {
-    font-size: .9rem;
+    font-size: 1rem;
     line-height: 120%;
     display: flex;
     gap: .5rem;
@@ -1229,6 +1225,9 @@ section.benefits > .title .abs {
     height: 30rem;
     transform: translate(-50%, -50%);
 }
+section.program .module-wrapper > .header .title br.mobile {
+    display: block;
+}
 section.benefits > .title .abs img {
     width: 100%;
     height: 100%;
@@ -1342,6 +1341,25 @@ section.author .content .author-text .abs-mobile {
 section.after .img-mobile {
     display: none;
 }
+section.tariffs .includes > .list > .available > .item > .text .list >div,
+section.tariffs .includes > .list > .unavailable > .item > .text .list> div {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+}
+section.tariffs .includes > .list > .available > .item > .text .list .dot-round,
+section.tariffs .includes > .list > .unavailable > .item > .text .list .dot-round {
+    width: .4rem;
+    height: .4rem;
+    min-width: .4rem;
+    border-radius: 50%;
+    background: #1D1D1D;
+}
+
+section.tariffs .light .item > .text .list .dot-round {
+    background: #F25B92 !important;
+}
+
 @media screen and (min-width: 2560px) and (max-width: 3840px) {
     html {
         font-size: 24px;
@@ -2224,7 +2242,10 @@ section.after .img-mobile {
         font-size: 4.5rem;
     }
     section.program > .content {
-        padding: 0 10%;
+        padding: 0 5%;
+    }
+    section.program .module-wrapper > .header .num {
+        white-space: nowrap;
     }
     section.program > .abs {
         display: none;
@@ -2252,10 +2273,7 @@ section.after .img-mobile {
         flex-direction: column;
         padding: 2rem 3rem 1.5rem 3rem;
     }
-    section.program .module-wrapper > .details {
-        padding-left: 1rem;
-    }
-    section.program .module-wrapper > .header .title br {
+    section.program .module-wrapper > .header .title br:not(.mobile) {
         display: none;
     }
     section.program .module-wrapper .toggle-btn {
@@ -2443,6 +2461,7 @@ section.after .img-mobile {
         background-position: center;
         background-size: cover;
     }
+
     section.qa .title {
         font-size: 4rem;
     }
@@ -2695,6 +2714,9 @@ section.after .img-mobile {
     section.course .grid {
         gap: .5rem .5rem;
     }
+    section.program .module-wrapper > .header {
+        gap: 1rem;
+    }
 }
 @media only screen and (max-width: 500px) {
     section.personal-brand .title > .inner > .abs {
@@ -2761,6 +2783,17 @@ section.after .img-mobile {
     section.after {
         padding: 3rem .5rem;
     }
+    section.program .module-wrapper .toggle-btn {
+        width: 2.5rem;
+        height: 2.5rem;
+        min-width: 2.5rem;
+    }
+    section.program > .content {
+        padding: 0 .5rem;
+    }
+    section.program .module-wrapper > .header {
+        gap: 1rem;
+    }
 }
 @media only screen and (max-width: 420px) {
     html {
@@ -2798,16 +2831,8 @@ section.after .img-mobile {
         padding-left: .5rem;
         padding-right: .5rem;
     }
-    section.program .module-wrapper .toggle-btn {
-        width: 2.5rem;
-        height: 2.5rem;
-        min-width: 2.5rem;
-    }
     section.program .module-wrapper > .header {
         gap: 1rem;
-    }
-    section.program .module-wrapper > .header .num {
-        white-space: nowrap;
     }
 }
 @media only screen and (max-width: 359px) {
