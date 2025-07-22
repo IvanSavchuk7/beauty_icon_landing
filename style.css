@@ -2536,6 +2536,11 @@ section.tariffs .light .item > .text .list .dot-round {
     section.course .grid > div {
         padding: 1.5rem;
     }
+    section.program .module-wrapper .toggle-btn {
+        width: 2.75rem;
+        height: 2.75rem;
+        min-width: 2.75rem;
+    }
     section.personal-brand .content .inner {
         flex-direction: column;
         gap: 0;
