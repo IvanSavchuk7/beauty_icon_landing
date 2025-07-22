@@ -83,6 +83,10 @@ header {
     flex-direction: column;
     padding: 0;
     position: relative;
+    background-image: url("./assets/images/bg-header.png");
+    background-repeat: no-repeat;
+    background-position: 130% 70%;
+    background-size: contain;
 }
 header > .abs {
     position: absolute;
@@ -2274,6 +2278,10 @@ section.after .img-mobile {
         width: 1rem;
         height: 1rem;
     }
+    header {
+        background-position: 50% 15%;
+        background-size: contain;
+    }
     section.program .module-wrapper:first-child .toggle-btn {
         background: #F25B92;
     }
@@ -2433,7 +2441,7 @@ section.after .img-mobile {
         padding: 4rem 3rem;
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 120% 120%;
+        background-size: cover;
     }
     section.qa .title {
         font-size: 4rem;
