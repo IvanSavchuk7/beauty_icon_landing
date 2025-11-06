@@ -1082,8 +1082,8 @@ section.tariffs .includes > .list > .unavailable > .item > .dot {
     font-size: .7rem;
 }
 section.tariffs .pro .available > .item:nth-last-child(-n+2) > .dot,
-section.tariffs .star .available > .item:nth-last-child(-n+3) > .dot,
-section.tariffs .light .available > .item:nth-last-child(-n+6) > .dot{
+section.tariffs .star .available > .item:nth-last-child(-n+1) > .dot,
+section.tariffs .light .available > .item:nth-last-child(-n+2) > .dot{
     background-color: #F25B92;
 }
 section.tariffs .includes > .list > .available > .item > .text,
@@ -2865,4 +2865,5 @@ section.tariffs .light .item > .text .list .dot-round {
     html {
         font-size: 12px;
     }
+
 }
