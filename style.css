@@ -1061,6 +1061,7 @@ section.tariffs .includes > .list > .available > .item,
 section.tariffs .includes > .list > .unavailable > .item {
     display: flex;
     gap: .5rem;
+    align-items: center;
 }
 section.tariffs .basic .includes > .list > .unavailable > .item:last-child,
 section.tariffs .light .includes > .list > .unavailable > .item:last-child {
@@ -2867,3 +2868,4 @@ section.tariffs .light .item > .text .list .dot-round {
     }
 
 }
+
