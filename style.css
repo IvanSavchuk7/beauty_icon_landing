@@ -1067,6 +1067,9 @@ section.tariffs .basic .includes > .list > .unavailable > .item:last-child,
 section.tariffs .light .includes > .list > .unavailable > .item:last-child {
     opacity: 0;
 }
+section.tariffs .content .light {
+    justify-content: space-between;
+}
 section.tariffs .includes > .list > .available > .item > .dot,
 section.tariffs .includes > .list > .unavailable > .item > .dot {
     width: 1.25rem;
@@ -1082,8 +1085,8 @@ section.tariffs .includes > .list > .unavailable > .item > .dot {
     font-family: "Fixel Semibold", sans-serif;
     font-size: .7rem;
 }
-section.tariffs .pro .available > .item:nth-last-child(-n+2) > .dot,
-section.tariffs .star .available > .item:nth-last-child(-n+1) > .dot,
+section.tariffs .pro .available > .item:nth-last-child(-n+5) > .dot,
+section.tariffs .star .available > .item:nth-last-child(-n+4) > .dot,
 section.tariffs .light .available > .item:nth-last-child(-n+2) > .dot{
     background-color: #F25B92;
 }
