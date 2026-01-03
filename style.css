@@ -1089,7 +1089,7 @@ section.tariffs .includes > .list > .unavailable > .item > .dot {
 }
 section.tariffs .pro .available > .item:nth-last-child(-n+5) > .dot,
 section.tariffs .star .available > .item:nth-last-child(-n+4) > .dot,
-section.tariffs .light .available > .item:nth-last-child(-n+2) > .dot{
+section.tariffs .light .available > .item:nth-last-child(-n+3) > .dot{
     background-color: #F25B92;
 }
 section.tariffs .includes > .list > .available > .item > .text,
