@@ -929,6 +929,9 @@ section.exmaples-shorts {
 section.exmaples-shorts .title > div {
     color: #FFFFFF;
 }
+section.exmaples-shorts .title > div:first-child {
+    font-family: "Basenji Light", sans-serif;
+}
 section.exmaples-shorts iframe {
     aspect-ratio: 9 / 16;
     border: 2px solid #FFFFFF;
@@ -1090,7 +1093,8 @@ section.tariffs .basic .includes > .list > .unavailable > .item:last-child,
 section.tariffs .light .includes > .list > .unavailable > .item:last-child {
     opacity: 0;
 }
-section.tariffs .content .light {
+section.tariffs .content .light,
+section.tariffs .content .star {
     justify-content: space-between;
 }
 section.tariffs .includes > .list > .available > .item > .dot,
@@ -2677,6 +2681,7 @@ section.tariffs .light .item > .text .list .dot-round {
     }
     section.exmaples-shorts .title > div:first-child {
         font-size: 3rem;
+        padding-bottom: 10px;
     }
     section.exmaples > .title > div:last-child {
         font-size: 2rem;
@@ -2861,6 +2866,7 @@ section.tariffs .light .item > .text .list .dot-round {
     }
     section.exmaples-shorts .title > div:first-child {
         font-size: 2.5rem;
+        padding-bottom: 5px;
     }
     section.exmaples-shorts .title > div:last-child {
         font-size: 2rem;
