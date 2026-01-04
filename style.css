@@ -2859,6 +2859,12 @@ section.tariffs .light .item > .text .list .dot-round {
     section.program .module-wrapper > .header {
         gap: 1rem;
     }
+    section.exmaples-shorts .title > div:first-child {
+        font-size: 2.5rem;
+    }
+    section.exmaples-shorts .title > div:last-child {
+        font-size: 2rem;
+    }
 }
 @media only screen and (max-width: 420px) {
     html {
