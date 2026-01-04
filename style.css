@@ -922,6 +922,27 @@ section.exmaples > .title {
 section.exmaples > .title > div:last-child {
     font-size: 2rem;
 }
+section.exmaples-shorts {
+    background: #F25B92;
+    padding: 1.5rem 3rem;
+}
+section.exmaples-shorts .title > div {
+    color: #FFFFFF;
+}
+section.exmaples-shorts iframe {
+    aspect-ratio: 9 / 16;
+    border: 2px solid #FFFFFF;
+    border-bottom-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+section.exmaples-shorts .swiper-wrapper .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section.exmaples-shorts .swiper-button-next, section.exmaples-shorts .swiper-button-prev {
+    border: 2px solid #FFFFFF;
+}
 section.extra > .title {
     width: 100%;
     display: flex;
@@ -1857,6 +1878,9 @@ section.tariffs .light .item > .text .list .dot-round {
     section.benefits > .title .abs {
         left: calc(70% + 10rem);
     }
+    section.exmaples-shorts {
+        padding: 1.5rem 1rem;
+    }
 }
 @media only screen and (min-width: 830px) and (max-width: 940px) {
     section.extra > .title .abs {
@@ -2647,6 +2671,15 @@ section.tariffs .light .item > .text .list .dot-round {
     }
     section.exmaples {
         padding-left: 1rem;
+    }
+    section.exmaples-shorts {
+        padding: 1.5rem 1rem;
+    }
+    section.exmaples-shorts .title > div:first-child {
+        font-size: 3rem;
+    }
+    section.exmaples > .title > div:last-child {
+        font-size: 2rem;
     }
     .swiper-button-next, .swiper-button-prev {
         width: 4rem;

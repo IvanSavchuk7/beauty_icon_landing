@@ -108,6 +108,45 @@ const swiper = new Swiper('.modules-swiper', {
         }
     },
 });
+const swiper1 = new Swiper('.feedback-swiper', {
+    slidesPerView: 4.2,
+    spaceBetween: 20,
+    loop: true,
+    freeMode: {
+        enabled: true,
+        momentum: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+        1440: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+        },
+        1240: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+        },
+        830: {
+            slidesPerView: 2.5,
+            spaceBetween: 16,
+        },
+        600: {
+            slidesPerView: 1.5,
+            spaceBetween: 12,
+        },
+        400: {
+            slidesPerView: 1,
+            spaceBetween: 8,
+        },
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 8,
+        }
+    },
+});
 
 
 
