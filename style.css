@@ -924,6 +924,7 @@ section.exmaples > .title > div:last-child {
 }
 section.exmaples-shorts {
     background: #F25B92;
+    padding-bottom: 2rem;
 }
 section.exmaples-shorts .title > div {
     color: #FFFFFF;
@@ -2916,4 +2917,5 @@ section.tariffs .light .item > .text .list .dot-round {
     }
 
 }
+
 
