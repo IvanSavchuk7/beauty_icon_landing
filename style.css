@@ -924,7 +924,6 @@ section.exmaples > .title > div:last-child {
 }
 section.exmaples-shorts {
     background: #F25B92;
-    padding: 1.5rem 3rem;
 }
 section.exmaples-shorts .title > div {
     color: #FFFFFF;
@@ -1882,9 +1881,6 @@ section.tariffs .light .item > .text .list .dot-round {
     section.benefits > .title .abs {
         left: calc(70% + 10rem);
     }
-    section.exmaples-shorts {
-        padding: 1.5rem 1rem;
-    }
 }
 @media only screen and (min-width: 830px) and (max-width: 940px) {
     section.extra > .title .abs {
@@ -2172,6 +2168,9 @@ section.tariffs .light .item > .text .list .dot-round {
     section.author .content .author-text .abs-mobile img {
         width: 100%;
         height: 100%;
+    }
+    section.exmaples-shorts .title > div:first-child {
+        font-size: 3.5rem;
     }
     section.author .content .left .img-mobile {
         display: flex;
@@ -2676,12 +2675,8 @@ section.tariffs .light .item > .text .list .dot-round {
     section.exmaples {
         padding-left: 1rem;
     }
-    section.exmaples-shorts {
-        padding: 1.5rem 1rem;
-    }
     section.exmaples-shorts .title > div:first-child {
         font-size: 3rem;
-        padding-bottom: 10px;
     }
     section.exmaples > .title > div:last-child {
         font-size: 2rem;
@@ -2866,7 +2861,6 @@ section.tariffs .light .item > .text .list .dot-round {
     }
     section.exmaples-shorts .title > div:first-child {
         font-size: 2.5rem;
-        padding-bottom: 5px;
     }
     section.exmaples-shorts .title > div:last-child {
         font-size: 2rem;
@@ -2910,6 +2904,10 @@ section.tariffs .light .item > .text .list .dot-round {
     }
     section.program .module-wrapper > .header {
         gap: 1rem;
+    }
+    section.exmaples-shorts iframe {
+        width: 90%;
+        height: auto;
     }
 }
 @media only screen and (max-width: 359px) {

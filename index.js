@@ -109,7 +109,7 @@ const swiper = new Swiper('.modules-swiper', {
     },
 });
 const swiper1 = new Swiper('.feedback-swiper', {
-    slidesPerView: 4.2,
+    slidesPerView: 1.1,
     spaceBetween: 20,
     loop: true,
     freeMode: {
@@ -122,11 +122,11 @@ const swiper1 = new Swiper('.feedback-swiper', {
     },
     breakpoints: {
         1440: {
-            slidesPerView: 4,
+            slidesPerView: 4.5,
             spaceBetween: 20,
         },
         1240: {
-            slidesPerView: 3,
+            slidesPerView: 3.5,
             spaceBetween: 20,
         },
         830: {
@@ -134,16 +134,20 @@ const swiper1 = new Swiper('.feedback-swiper', {
             spaceBetween: 16,
         },
         600: {
-            slidesPerView: 1.5,
+            slidesPerView: 1.35,
             spaceBetween: 12,
         },
         400: {
-            slidesPerView: 1,
+            slidesPerView: 1.2,
             spaceBetween: 8,
         },
+        360: {
+            slidesPerView: 1.15,
+            spaceBetween: 5,
+        },
         320: {
-            slidesPerView: 1,
-            spaceBetween: 8,
+            slidesPerView: 1.15,
+            spaceBetween: 5,
         }
     },
 });
