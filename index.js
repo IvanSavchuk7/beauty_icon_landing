@@ -121,24 +121,24 @@ const swiper1 = new Swiper('.feedback-swiper', {
         prevEl: '.swiper-button-prev',
     },
     breakpoints: {
-        1440: {
+        1640: {
             slidesPerView: 4.5,
             spaceBetween: 20,
         },
         1240: {
-            slidesPerView: 3.5,
+            slidesPerView: 3.35,
             spaceBetween: 20,
         },
         830: {
-            slidesPerView: 2.5,
+            slidesPerView: 2.35,
             spaceBetween: 16,
         },
         600: {
-            slidesPerView: 1.35,
+            slidesPerView: 1.65,
             spaceBetween: 12,
         },
         400: {
-            slidesPerView: 1.2,
+            slidesPerView: 1.25,
             spaceBetween: 8,
         },
         360: {

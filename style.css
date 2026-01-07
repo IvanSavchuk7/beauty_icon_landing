@@ -1019,8 +1019,13 @@ section.tariffs {
 section.tariffs > .title {
     font-size: 5rem;
 }
+.item.hidden {
+    opacity: 0;
+    margin-top: -.5rem;
+}
 section.tariffs > .content {
     padding: 3rem 0;
+    justify-content: center;
     display: flex;
     gap: 1rem;
 }
@@ -1029,6 +1034,7 @@ section.tariffs > .content > div {
     flex-direction: column;
     border: 1px solid #C9C9C9;
     flex: 1;
+    justify-content: space-between;
 }
 section.tariffs > .content > div > div:not(.name) {
     padding: 0 1rem;
@@ -1089,14 +1095,6 @@ section.tariffs .includes > .list > .unavailable > .item {
     gap: .5rem;
     align-items: center;
 }
-section.tariffs .basic .includes > .list > .unavailable > .item:last-child,
-section.tariffs .light .includes > .list > .unavailable > .item:last-child {
-    opacity: 0;
-}
-section.tariffs .content .light,
-section.tariffs .content .star {
-    justify-content: space-between;
-}
 section.tariffs .includes > .list > .available > .item > .dot,
 section.tariffs .includes > .list > .unavailable > .item > .dot {
     width: 1.25rem;
@@ -1112,8 +1110,8 @@ section.tariffs .includes > .list > .unavailable > .item > .dot {
     font-family: "Fixel Semibold", sans-serif;
     font-size: .7rem;
 }
-section.tariffs .pro .available > .item:nth-last-child(-n+5) > .dot,
-section.tariffs .star .available > .item:nth-last-child(-n+4) > .dot,
+section.tariffs .pro .available > .item:nth-last-child(-n+7) > .dot,
+section.tariffs .star .available > .item:nth-last-child(-n+5) > .dot,
 section.tariffs .light .available > .item:nth-last-child(-n+3) > .dot{
     background-color: #F25B92;
 }
@@ -1572,13 +1570,16 @@ section.tariffs .light .item > .text .list .dot-round {
         padding: 1.25rem 5rem;
     }
 }
-@media only screen and (min-width: 830px) and (max-width: 1440px) {
+@media only screen and (min-width: 830px) and (max-width: 1340px) {
     section.tariffs > .content {
         flex-wrap: wrap;
     }
     section.tariffs > .content > div {
         width: calc(50% - 1rem);
         flex: none;
+    }
+    section.tariffs > .content .includes > .description {
+        font-size: 1rem;
     }
 }
 @media only screen and (min-width: 1024px) and (max-width: 1239px) {
